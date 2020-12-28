@@ -97,7 +97,7 @@ module.exports = async ({ actions, graphql, reporter }, options) => {
     console.log(wpPages)
     wpPages &&
       wpPages.map(page => {
-        let pagePath = `${page?.uri}`
+        let pagePath = `${page.uri}`
 
         /**
          * If the page is the front page, the page path should not be the uri,
@@ -115,7 +115,7 @@ module.exports = async ({ actions, graphql, reporter }, options) => {
           },
         })
 
-        reporter.info(`page created: ${page?.uri}`)
+        reporter.info(`page created: ${page.uri}`)
       })
 
     reporter.info(`# -----> PAGES TOTAL: ${wpPages.length}`)
